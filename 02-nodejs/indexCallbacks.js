@@ -1,10 +1,11 @@
+//Callbacks muita sicronizaçao
 /* 
 0 Obter um usuario
 1 Obter o numero de telefone de um usuario a partir de seu Id
 2 Obter o endereco do seu usuario pelo Id
 */
 
-/* Quando chama obterUsuario passo função como paramentro 
+/* Quando chama obterUsuario passo função como parametro 
 e ela vai ser chamada passando o resultado pra quem chamou assim que for resolvida
 */
 

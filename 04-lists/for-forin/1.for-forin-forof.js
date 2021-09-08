@@ -1,6 +1,6 @@
 /* testar for forin e forof */
 //importando modulo service
-const service = require('./service')//modulos que eu criei uso o ./ e modulos internos é sem o ./ um arquivo json consegue com o ./package e obter suas info
+const service = require('./service')//modulos que eu criei uso o ./ e modulos internos é sem o ./. Um arquivo json consegue com o ./package e obter suas info
 
 async function main() { //fn main que vai manipular promises então uso o async
     try {  // try catch para manipular erro de uma forma que n de problema
@@ -14,6 +14,22 @@ async function main() { //fn main que vai manipular promises então uso o async
             names.push(pessoa.name)  // add todos os nomes nessa lista de nomes, push no nome da pessoa.name
         }
         console.timeEnd('for')
+
+        //forin
+        console.time('forin')
+        for(let i in result.results) {
+            const pessoa = result.results[i]
+            names.push(pessoa.name)
+        }
+        console.timeEnd('forin')
+
+        //forof results
+        console.time('forof')
+        for(pessoa of result.results){
+            names.push(pessoa.name)
+        }
+        console.timeEnd('forof')
+
         console.log(`names`, names)
     }
     catch (error) {  //manipulando error caso de algum problema

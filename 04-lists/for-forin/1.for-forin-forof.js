@@ -8,7 +8,7 @@ async function main() { //fn main que vai manipular promises então uso o async
         const names = []  //add lista em um variavel const name igual array
         console.time('for')
         //trazendo todos os nomes e printar na tela
-        for (let i = 0; i <= result.results.length - 1; i++) {  //results pq é obj que foi retornado pelo api star wars e .length para verificar a quantidade desse array, -1 se ele trouxer a quant menor que 0 entra no catch e add um incrementador
+        for (let i = 0; i <= result.results.length -1; i++) {  //results pq é obj que foi retornado pelo api star wars e .length para verificar a quantidade desse array, -1 se ele trouxer a quant menor que 0 entra no catch e add um incrementador
             //pegando pessoas na posição i
             const pessoa = result.results[i]
             names.push(pessoa.name)  // add todos os nomes nessa lista de nomes, push no nome da pessoa.name

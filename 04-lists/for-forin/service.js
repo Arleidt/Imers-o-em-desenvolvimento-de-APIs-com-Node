@@ -24,6 +24,9 @@ module.exports = { //exportando no node.js
    obterPessoas //passando somente o nome do objeto que internamente ele vai entender o que ta acontecendo
 }
 
+
+
+
 /* //teste se deu certo DESCOMENTAR
 obterPessoas('r2')
 .then(function (resultado){ //quando function chegar um resultado, o que fazer? printar para mim

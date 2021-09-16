@@ -1,6 +1,7 @@
+//map usado para criar um array novo baseado no que o user pediu 
 const service = require('./service')
-//criando meu proprio array 
 
+//criando meu proprio array
 //substituindo função global do javascript, e ele vai receber uma fn que vai ter um callback
 Array.prototype.meuMap = function (callback) {
     const novoArrayMapeado = [] //vai guardar informações do array quando terminar a execução

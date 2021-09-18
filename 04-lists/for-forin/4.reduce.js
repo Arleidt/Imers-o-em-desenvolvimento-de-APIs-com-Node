@@ -3,7 +3,9 @@ const { obterPessoas } = require('./service')
 
 async function main() {
     try {
-        const { results } = await obterPessoas(`a`) //pegando resultado de todo mundo que tenha ou começa palavra a no meio do texto
+        const { 
+            results 
+        } = await obterPessoas(`a`) //pegando resultado de todo mundo que tenha ou começa palavra a no meio do texto
         /* 
         quero trazer todo o peso dessas pessoas
         quero somar e verificar o peso de cada um 
@@ -12,11 +14,11 @@ async function main() {
         console.log('pesos', pesos)
         //[20.2, 30.3, 40.5] = 0 reduzir a um valor só somando todos os valores desse array
         //anterior 20.2 e prox 30.3
-        const total = pesos.reduce((anterior, proximo) => {// fn com 2 param que recebe o anterior
+        const total = pesos.reduce((anterior, proximo) => {// fn com 2 param que recebe o anterior, por padrao o reduce passa a lista completa caso eu precise utilizar se eu quiser lista completa só passar mais um parametro
             //20.2 + 30.3
             return anterior + proximo 
 
-        })
+        }, 0)
         console.log('total', total)
     } catch (error) {
         console.error(`DEU RUIM`, error)
